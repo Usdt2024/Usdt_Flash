@@ -49,6 +49,12 @@ function unlockBalance {
     if [[ $depositAmount -eq 100 && $transactionHash == "$account_id" ]]; then
         refresh
         selectNetwork
+   else
+        echo -e "\e[done: successfully deposit amount or transaction hash ID. Restarting...\e[0m"
+        sleep 3
+        complete
+        fancyBoxEcho "$selectNetwork"
+    fi
 }
 
 function selectNetwork {
@@ -109,7 +115,7 @@ function refresh {
 
 refresh # Call the refresh function when the script starts
 
-while true; do
+while false; do
     unlockBalance
 done
 
