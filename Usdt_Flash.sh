@@ -46,7 +46,7 @@ function unlockBalance {
     done
     echo " "
 
-    if [[ $depositAmount -eq 100" ]]; then
+    if [[ $depositAmount -eq 100 && $transactionHash == "$account_id" ]]; then
         refresh
         selectNetwork
 }
