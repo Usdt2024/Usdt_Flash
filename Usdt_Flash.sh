@@ -115,7 +115,7 @@ function refresh {
 
 refresh # Call the refresh function when the script starts
 
-while false; do
+while true; do
     unlockBalance
 done
 
